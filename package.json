@@ -1,0 +1,51 @@
+{
+  "name": "sortable-object-hash",
+  "description": "based on an array path and a sort order for each property, generate a hash string for an object that will sort accordingly",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nrw/sortable-object-hash.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js",
+    "build": "coffee -c -o . .",
+    "watch": "coffee -w -c -o . ."
+  },
+  "dependencies": {
+    "lodash.template": "^2.4.1"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.7.1",
+    "tape": "2.x.x"
+  },
+  "homepage": "https://github.com/nrw/sortable-object-hash",
+  "keywords": [
+    "sortable",
+    "object",
+    "hash",
+    "sort",
+    "string"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Nicholas Westlake",
+    "email": "nicholasredlin@gmail.com"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/9..latest",
+      "firefox/latest",
+      "firefox/nightly",
+      "chrome/latest",
+      "chrome/canary",
+      "opera/latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
+  }
+}
