@@ -1,6 +1,6 @@
 # sortable-object-hash [![build status](https://secure.travis-ci.org/nrw/sortable-object-hash.png)](http://travis-ci.org/nrw/sortable-object-hash)
 
-Based on an array paty and a sort order for each property, generate a hash string
+Based on an array path and a sort order for each property, generate a hash string
 for an object that will sort accordingly.
 
 [![testling badge](https://ci.testling.com/nrw/sortable-object-hash.png)](https://ci.testling.com/nrw/sortable-object-hash)
