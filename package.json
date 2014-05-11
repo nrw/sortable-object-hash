@@ -13,10 +13,10 @@
     "watch": "coffee -w -c -o . ."
   },
   "dependencies": {
-    "lodash.template": "^2.4.1"
+    "lodash.template": "2.4.x"
   },
   "devDependencies": {
-    "coffee-script": "^1.7.1",
+    "coffee-script": "1.7.x",
     "tape": "2.x.x"
   },
   "homepage": "https://github.com/nrw/sortable-object-hash",
