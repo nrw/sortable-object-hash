@@ -8,15 +8,13 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.js",
-    "build": "coffee -c -o . .",
-    "watch": "coffee -w -c -o . ."
+    "test": "tape test/*.js"
   },
   "dependencies": {
-    "lodash.template": "2.4.x"
+    "lodash.template": "2.4.x",
+    "sortable-hash": "0.0.0"
   },
   "devDependencies": {
-    "coffee-script": "1.7.x",
     "tape": "2.x.x"
   },
   "homepage": "https://github.com/nrw/sortable-object-hash",
@@ -44,8 +42,7 @@
       "opera/next",
       "safari/5.1..latest",
       "ipad/6.0..latest",
-      "iphone/6.0..latest",
-      "android-browser/4.2..latest"
+      "iphone/6.0..latest"
     ]
   }
 }
