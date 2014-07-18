@@ -35,7 +35,7 @@ function Hash (path, order, interpolated, opts) {
         sort.push(sep)
       }
 
-      var key = template(tpl, doc, {interpolate: opts.interpolate})
+      var key = template(tpl, doc, opts)
       var keys = key.split(opts.delimiter)
       key = keys[0]
 
