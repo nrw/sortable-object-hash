@@ -16,12 +16,17 @@ var order = {
 
 var sortable = sortableHash(['str','num'], order)
 
-sortable.hash({str:'a', num:'1'}) // bvzrvzyveyze
-sortable.hash({str:'c', num:'2'}) // w0k33m89ewwd
-sortable.hash({str:'z', num:'3'}) // w1q1tubb9y65
+sortable.hash({str:'a', num:'1'})
+// a042000000000000000070c3bf0042000000000000000000
+sortable.hash({str:'c', num:'2'})
+// a042400000000000000070c3bf00423ff000000000000000
+sortable.hash({str:'z', num:'3'})
+// a070c3be0070c3bf0042400000000000000000
 
-sortable.hash({str:['a','b'], num:'3'}) // g25bjg5yp2fx
-sortable.hash({str:['a','c']}) // g25vjugup7fd
+sortable.hash({str:['a','b'], num:'3'})
+// a0420000000000000000423ff000000000000070c3bf0042400000000000000000
+sortable.hash({str:['a','c']})
+// a042000000000000000042400000000000000070c3bf0070c3be0000
 ```
 
 ## Usage
@@ -56,17 +61,16 @@ var interpolated = {
 // interpolated key: {interpolated[object[thisValue]]}.objectProperty
 var sortable = sortableHash(['{key}.val','str','num'], order, interpolated)
 
-sortable.hash({key: 'first', val: 'z', str:'a', num:'1'}) // u55gg5z5zgg5
+sortable.hash({key: 'first', val: 'z', str:'a', num:'1'})
+// a042400000000000000070c3bf0042000000000000000070c3bf0042000000000000000000
 ```
 
 #### opts
 
-- `opts.interpolate = /{([\s\S]+?)}/g` regex to match for interpolation (uses
-  [lodash.template](https://www.npmjs.org/package/lodash.template)).
-- `opts.empty = 20` the index to assign to properties not found in the sort
+- `opts.empty = '\xfe'` the index to assign to properties not found in the sort
   order. set higher than the max data index to place empty items after. set to
   -1 to place empty properties before.
-- `opts.separator = 21` the index to assign separation of keys. must be larger
+- `opts.separator = '\xff'` the index to assign separation of keys. must be larger
   than max data index and `opts.empty`
 - `opts.delimiter = '.'` the delimiter to used for splitting interpolated keys.
 
@@ -77,7 +81,7 @@ Return a sortable hash string.
 ### sortable.array(obj)
 
 Return the array of indexes that will be passed to
-[sortable-hash](https://www.npmjs.org/package/sortable-hash) to generate a hash.
+[bytewise](https://www.npmjs.org/package/bytewise) to generate a hash.
 
 ## License
 
