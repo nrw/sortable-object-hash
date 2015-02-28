@@ -1,7 +1,7 @@
 {
   "name": "sortable-object-hash",
   "description": "based on an array path and a sort order for each property, generate a hash string for an object that will sort accordingly",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/nrw/sortable-object-hash.git"
